@@ -183,8 +183,6 @@ def process_file(file_path):
 current_dir = os.path.dirname(__file__)
 
 file_path = os.path.join(current_dir, "murli.htm")
-
-file_path = "murli.htm"
 extracted_data = process_file(file_path)
 data = extracted_data
 data1 = [Document(page_content=data)]

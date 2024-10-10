@@ -239,9 +239,3 @@ def get_chunks():
         return {"chunks": chunk_list}
     else:
         return {"message": "No results found."}
-
-
-if __name__ == "__main__":
-    import uvicorn
-
-    uvicorn.run(app)

@@ -1,0 +1,8 @@
+fastapi==0.95.1
+uvicorn==0.22.0
+langchain==0.0.201
+pinecone-client==2.2.1
+langchain-pinecone==0.0.3
+bs4==0.0.1
+beautifulsoup4==4.12.2
+python-dotenv==1.0.0

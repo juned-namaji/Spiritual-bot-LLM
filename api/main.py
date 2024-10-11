@@ -33,34 +33,6 @@ def initialize_pinecone():
 
 initialize_pinecone()
 
-# query = "shiv ratri or shiv jayanti"
-
-# # Use the Pinecone index for embedding
-
-# embedding = PineconeEmbeddings(model="multilingual-e5-large").embed_query(query)
-
-# # Query the index using the proper method
-
-# index = pinecone.Index(
-#     index_name=INDEX_NAME,
-#     host="https://pinecone-r4fpwgv.svc.aped-4627-b74a.pinecone.io",
-#     api_key="d95ac410-5110-4ca9-ad8c-69eea8b8c09d"
-# )
-# results = index.query(  # Query the index
-#     vector=embedding,
-#     top_k=10,
-#     include_values=False,
-#     include_metadata=True
-# )
-# # Extract and print the top 10 chunks
-
-# top_chunks = results.get('matches', [])
-# for i, chunk in enumerate(top_chunks, start=1):
-#     print(f"--- Top {i} Chunk ---")
-#     print(f"Date: {chunk['metadata'].get('date', 'N/A')}")
-#     print(f"Title: {chunk['metadata'].get('title', 'N/A')}")
-#     print(f"Text: {chunk['metadata'].get('text', 'N/A')}\n")
-
 
 @app.get("/query")
 async def query_pinecone():

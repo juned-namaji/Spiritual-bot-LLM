@@ -1,9 +1,4 @@
 langchain
 langchain_community
-langchain_pinecone
 pinecone
-pinecone-client
-beautifulsoup4
 fastapi
-bs4
-uvicorn

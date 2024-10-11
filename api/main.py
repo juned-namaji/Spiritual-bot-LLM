@@ -12,9 +12,9 @@ load_dotenv(dotenv_path)
 
 PINECONE_API_KEY = os.environ.get("PINECONE_API_KEY")
 PINECONE_API_ENV = os.environ.get("PINECONE_API_ENV")
+INDEX_NAME = "pinecone"
 
 app = FastAPI()
-INDEX_NAME = "pinecone"
 
 pc = Pinecone(api_key=os.environ.get("PINECONE_API_KEY"))
 
@@ -34,7 +34,7 @@ def initialize_pinecone():
 initialize_pinecone()
 
 
-@app.get("/query")
+@app.get("/query/{query}")
 async def query_pinecone():
     query = "shiv ratri or shiv jayanti"
 

@@ -1,4 +1,6 @@
 langchain
-langchain_community
+pinecone-client
+langchain_pinecone
 pinecone
+uvicorn
 fastapi

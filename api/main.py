@@ -33,10 +33,14 @@ def initialize_pinecone():
 initialize_pinecone()
 
 
+@app.get("/")
+def ret():
+    return {"Hello": "World"}
+
+
 @app.get("/query/{query}")
 async def query_pinecone(query: str):
 
-    # Use the Pinecone index for embedding
     embedding = PineconeEmbeddings(model="multilingual-e5-large").embed_query(query)
 
     # Query the index

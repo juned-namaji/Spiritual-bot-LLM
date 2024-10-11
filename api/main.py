@@ -33,9 +33,8 @@ def initialize_pinecone():
 initialize_pinecone()
 
 
-@app.get("/query")
-async def query_pinecone():
-    query = "shiv ratri or shiv jayanti"
+@app.get("/query/{query}")
+async def query_pinecone(query: str):
 
     # Use the Pinecone index for embedding
     embedding = PineconeEmbeddings(model="multilingual-e5-large").embed_query(query)

@@ -9,9 +9,8 @@ from fastapi import FastAPI
 
 dotenv_path = find_dotenv()
 load_dotenv(dotenv_path)
-
-PINECONE_API_KEY = os.environ.get("PINECONE_API_KEY")
-PINECONE_API_ENV = os.environ.get("PINECONE_API_ENV")
+PINECONE_API_KEY = "624cd15e-b2fc-4e1b-99f4-71e0edb92447"
+PINECONE_API_ENV = "us-east-1"
 INDEX_NAME = "pinecone"
 
 app = FastAPI()

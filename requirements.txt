@@ -4,3 +4,4 @@ langchain_pinecone
 pinecone
 uvicorn
 fastapi
+dotenv

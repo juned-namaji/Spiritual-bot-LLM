@@ -33,7 +33,7 @@ def initialize_pinecone():
 initialize_pinecone()
 
 
-@app.get("/query/{query}")
+@app.get("/query")
 async def query_pinecone():
     query = "shiv ratri or shiv jayanti"
 
